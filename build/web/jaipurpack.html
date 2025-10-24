@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jaipur Holiday Package - TravelEase</title>
+  <link rel="stylesheet" href="stle.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="flight.html">Flights</a>
+      <a href="bus.html">Bus</a>
+      <a href="holiday.html">Package</a>
+      <a href="hotel.html">Hotels</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Discover Royal Jaipur</h1>
+    <p>2 Nights / 3 Days | Culture, Forts, Heritage</p>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <img src="jaipur.jpeg" alt="Hawa Mahal Jaipur">
+    <img src="jaipur1.jpeg" alt="Amber Fort Jaipur">
+    <img src="jaipur2.jpeg" alt="City Palace Jaipur">
+  </section>
+
+  <!-- About Jaipur -->
+  <section class="info">
+    <h2>About Jaipur</h2>
+    <p>
+      <strong>Jaipur</strong>, famously known as the <em>Pink City</em>, is a vibrant blend of rich history, majestic architecture,
+      and royal heritage. As the capital of Rajasthan, Jaipur is a gateway to India’s regal past — where palaces, forts, and
+      bustling bazaars bring stories of kings and queens to life.
+    </p>
+    <p>
+      From the iconic <strong>Hawa Mahal</strong> with its honeycomb façade to the grand <strong>Amber Fort</strong> overlooking the hills,
+      every corner of Jaipur is steeped in charm. Stroll through the <strong>City Palace</strong>, admire astronomical wonders at
+      <strong>Jantar Mantar</strong>, or shop for colorful textiles, gemstones, and handcrafted souvenirs in the old city markets.
+    </p>
+    <p>
+      Jaipur offers more than just sightseeing — it’s an experience of royal culture, traditional Rajasthani cuisine, and timeless art.
+      Whether you’re exploring ancient forts or enjoying a camel ride at sunset, Jaipur leaves every traveler enchanted.
+    </p>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Jaipur Trip</h2>
+    <form method="post" action="books">
+
+      <label for="destination">Destination:</label>
+      <input type="text"  name="n1" value="Jaipur" readonly />
+
+      <label for="name">Full Name:</label>
+      <input type="text" name="n2"  required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="n3"  required />
+
+      <label for="travel_date">Travel Date:</label>
+      <input type="date" name="n4"  required />
+
+      <label for="people">Number of People:</label>
+      <input type="number" name="n5"  min="1" required />
+
+      <label for="requests">Special Requests:</label>
+      <textarea name="n6"  placeholder="Any special preferences or questions?"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+</body>
+</html>

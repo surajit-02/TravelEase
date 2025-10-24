@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelEase - Buses</title>
+  <link rel="stylesheet" href="Buses.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="flight.html">Flights</a>
+      <a href="bus.html" class="active">Bus</a>
+      <a href="holiday.html">Package</a>
+      <a href="hotel.html">Hotels</a>
+      
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Book Your Bus</h1>
+    <p>Search and book your bus tickets easily</p>
+  </section>
+
+  <!-- Search Form -->
+  <section class="search-container">
+    <form action="ShowBuses" method="get" class="search-form" id="busSearchForm">
+      <div class="form-row">
+        <div class="input-group">
+          <label for="source">From</label>
+          <input type="text" id="source" name="source" placeholder="Enter City" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="destination">To</label>
+          <input type="text" id="destination" name="destination" placeholder="Enter City" required>
+        </div>
+      </div>
+      <button type="submit" class="search-btn">Search Buses</button>
+    </form>
+  </section>
+
+  <!-- Bus Results -->
+  <section class="results-container" id="resultsContainer">
+    <!-- Results will appear here -->
+  </section>
+
+  <!-- JS -->
+  <script src="buses.js"></script>
+</body>
+</html>

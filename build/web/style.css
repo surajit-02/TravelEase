@@ -1,0 +1,610 @@
+/* ============================= */
+/* Reset and Base Styles         */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f4f7fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* Header & Navigation           */
+/* ============================= */
+header {
+  background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ============================= */
+/* Updated Navbar                */
+/* ============================= */
+.navbar {
+  
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background-color: #003366;
+}
+
+
+/* ============================= */
+/* Hero + About Section          */
+/* ============================= */
+.hero-about-bg {
+  position: relative;
+  background: url("withTravelEase.jpg") no-repeat center center/cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-about-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom right, rgba(0,118,182,0.7), rgba(0,0,0,0.6));
+  z-index: 0;
+}
+
+.hero, .about {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: clamp(28px, 5vw, 48px);
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: clamp(16px, 2vw, 22px);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #f1f1f1;
+  line-height: 1.8;
+}
+
+.about {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  margin-top: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about p {
+  font-size: 18px;
+  color: #f9f9f9;
+  line-height: 1.9;
+}
+
+/* ============================= */
+/* Features Section              */
+/* ============================= */
+.features {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f4f7fb 0%, #e9f1f8 100%);
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #0077b6;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.features h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffcc00;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.feature h3 {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #0077b6;
+  font-weight: 600;
+}
+
+.feature p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* Why Choose Us                 */
+/* ============================= */
+.why-choose {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.why-choose h2 {
+  color: #0077b6;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.why-choose ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.why-choose li {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.why-choose li:hover {
+  background: #e9f7fe;
+  transform: translateX(10px);
+}
+
+/* ============================= */
+/* How It Works                  */
+/* ============================= */
+.how-it-works {
+  padding: 80px 20px;
+  background: #f0f8ff;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  color: #0077b6;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  width: 250px;
+}
+
+.step::before {
+  content: attr(data-step);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0077b6;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.step:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.step h3 {
+  color: #0077b6;
+  margin: 15px 0;
+  font-size: 22px;
+}
+
+.step p {
+  color: #555;
+}
+
+/* ============================= */
+/* Testimonials                  */
+/* ============================= */
+.testimonials {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #0077b6;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: #f9f9f9;
+  padding: 30px;
+  border-left: 5px solid #0077b6;
+  border-radius: 12px;
+  width: 350px;
+  font-style: italic;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.testimonial::before {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 60px;
+  color: #0077b6;
+  opacity: 0.15;
+  font-family: Georgia, serif;
+}
+
+.testimonial h4 {
+  margin-top: 20px;
+  font-style: normal;
+  color: #0077b6;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* Footer                        */
+/* ============================= */
+footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #fff;
+  text-align: center;
+  padding: 40px 10px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+footer .social-links {
+  margin-top: 20px;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+/* ============================= */
+/* Auth Pages (Login/Register)   */
+/* ============================= */
+.auth-page {
+  background: url("withTravelEase.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 420px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.auth-form h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #0077b6;
+  font-weight: 700;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+  color: #444;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #0096c7;
+  box-shadow: 0 0 8px rgba(0,150,199,0.4);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  background-size: 200% 200%;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-position 0.5s, transform 0.3s;
+  margin-top: 10px;
+}
+
+.auth-form button:hover {
+  background-position: right center;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ============================= */
+/* Booking Form Section          */
+/* ============================= */
+.booking-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #f4f7fb;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.booking-form-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23f4f7fb" width="100" height="100"/><path fill="%23e9f1f8" d="M0 50 L100 50 L100 100 L0 100 Z"/></svg>') no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.booking-form-container h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #0077b6;
+  font-weight: 700;
+}
+
+.booking-form-container form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+.booking-form-container form label {
+  font-weight: 600;
+  color: #444;
+  font-size: 15px;
+}
+
+.booking-form-container form input {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.booking-form-container form input:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 8px rgba(0,180,216,0.3);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.booking-form-container form button {
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  background-size: 200% 200%;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-position 0.5s, transform 0.3s;
+  margin-top: 10px;
+}
+
+.booking-form-container form button:hover {
+  background-position: right center;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ============================= */
+/* Accessibility Focus Styles    */
+/* ============================= */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid #ffcc00;
+  outline-offset: 3px;
+}
+
+/* ============================= */
+/* Responsive Styles             */
+/* ============================= */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .navbar, nav ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2, .features h2, .why-choose h2, .how-it-works h2, .testimonials h2 {
+    font-size: 28px;
+  }
+  .about {
+    padding: 30px 20px;
+  }
+  .features, .why-choose, .how-it-works, .testimonials {
+    padding: 60px 20px;
+  }
+  .feature, .step, .testimonial {
+    width: 100%;
+  }
+  .auth-form, .booking-form-container form {
+    width: 100%;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+  .navbar a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  .hero-about-bg {
+    padding: 60px 15px;
+  }
+  .auth-form, .booking-form-container form {
+    padding: 25px 15px;
+  }
+}

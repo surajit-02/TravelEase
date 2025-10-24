@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andaman Holiday Package - TravelEase</title>
+  <link rel="stylesheet" href="stle.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="flight.html">Flights</a>
+      <a href="bus.html">Bus</a>
+      <a href="holiday.html">Package</a>
+      <a href="hotel.html">Hotels</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Explore the Beauty of Andaman Islands</h1>
+    <p>4 Nights / 5 Days | Beaches, Coral Reefs, Clear Waters</p>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <img src="andaman.jpeg" alt="Andaman Beach">
+    <img src="andaman1.jpeg" alt="Scuba Diving in Andaman">
+    <img src="andaman2.jpeg" alt="Radhanagar Beach Sunset">
+  </section>
+
+  <!-- About Andaman -->
+  <section class="info">
+    <h2>About Andaman</h2>
+    <p>
+      The **Andaman Islands** are a tropical paradise of turquoise waters, white sand beaches, and lush forests, located far from the Indian mainland in the Bay of Bengal. It's the perfect destination for relaxation, exploration, and underwater adventures.
+    </p>
+    <p>
+      From snorkeling at <strong>North Bay</strong> to scuba diving in <strong>Havelock Island</strong>, every activity in Andaman reveals vibrant coral reefs and marine life. You can relax at <strong>Radhanagar Beach</strong> — rated one of the best beaches in Asia — or explore history at the famous <strong>Cellular Jail</strong>.
+    </p>
+    <p>
+      Whether you're on a honeymoon, family vacation, or solo trip, the calm waters, untouched nature, and peaceful ambiance make Andaman a must-visit coastal escape.
+    </p>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Andaman Trip</h2>
+      <form method="post" action="books">
+
+      <label for="destination">Destination:</label>
+      <input type="text"  name="n1" value="Andaman" readonly />
+
+      <label for="name">Full Name:</label>
+      <input type="text" name="n2"  required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="n3"  required />
+
+      <label for="travel_date">Travel Date:</label>
+      <input type="date" name="n4"  required />
+
+      <label for="people">Number of People:</label>
+      <input type="number" name="n5"  min="1" required />
+
+      <label for="requests">Special Requests:</label>
+      <textarea name="n6"  placeholder="Any special preferences or questions?"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kerala Holiday Package - TravelEase</title>
+  <link rel="stylesheet" href="stle.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="flight.html">Flights</a>
+      <a href="bus.html">Bus</a>
+      <a href="holiday.html">Package</a>
+      <a href="hotel.html">Hotels</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Unwind in Serene Kerala</h1>
+    <p>5 Nights / 6 Days | Backwaters, Nature, Ayurveda</p>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <img src="kerala.jpeg" alt="Kerala Backwaters">
+    <img src="kerala1.jpeg" alt="Munnar Hills">
+    <img src="kerala2.jpeg" alt="Houseboat in Alleppey">
+  </section>
+
+  <!-- About Kerala -->
+  <section class="info">
+    <h2>About Kerala</h2>
+    <p>
+      <strong>Kerala</strong>, often called “God’s Own Country,” is a tropical paradise nestled between the Arabian Sea and the Western Ghats.
+      It’s known for its lush green landscapes, tranquil backwaters, pristine beaches, and rich cultural heritage.
+    </p>
+    <p>
+      A journey through Kerala offers something for everyone — relax on a <strong>houseboat in Alleppey</strong>, explore the misty tea gardens of
+      <strong>Munnar</strong>, or get rejuvenated with a traditional <strong>Ayurvedic massage</strong>. Wildlife lovers can head to
+      <strong>Periyar Wildlife Sanctuary</strong>, while beach enthusiasts will find peace in <strong>Kovalam</strong> and <strong>Varkala</strong>.
+    </p>
+    <p>
+      The cuisine, people, and traditions of Kerala make it one of India’s most inviting and soulful travel destinations. Whether you’re seeking
+      relaxation, romance, or exploration, Kerala promises an unforgettable escape.
+    </p>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Kerala Trip</h2>
+    <form method="post" action="books">
+
+      <label for="destination">Destination:</label>
+      <input type="text"  name="n1" value="Kerala" readonly />
+
+      <label for="name">Full Name:</label>
+      <input type="text" name="n2"  required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="n3"  required />
+
+      <label for="travel_date">Travel Date:</label>
+      <input type="date" name="n4"  required />
+
+      <label for="people">Number of People:</label>
+      <input type="number" name="n5"  min="1" required />
+
+      <label for="requests">Special Requests:</label>
+      <textarea name="n6"  placeholder="Any special preferences or questions?"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+</body>
+</html>

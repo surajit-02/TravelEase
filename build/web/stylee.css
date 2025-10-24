@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #004d99;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #003366;
+}
+
+.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #003366;
+}
+
+.packages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px auto;
+  gap: 20px;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+.card p {
+  margin: 0 10px 10px 10px;
+  color: #666;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Form styles */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form button {
+  background-color: #004d99;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.booking-form button:hover {
+  background-color: #003366;
+}

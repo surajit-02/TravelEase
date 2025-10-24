@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View All Bookings</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2d3e50;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      background: #007bff;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    header a:hover {
+      background: #0056b3;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #333;
+      text-align: center;
+    }
+
+    .option-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .option-group button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .option-group button:hover {
+      background-color: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 500px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>View All Bookings</h1>
+    <a href="Admin.html">Back to Dashboard</a>
+  </header>
+
+  <div class="container">
+    <h2>Select Booking Type</h2>
+
+    <div class="option-group">
+      <button onclick="loadBooking('ViewFlightBookings.jsp')">Flights</button>
+      <button onclick="loadBooking('ViewBusBooking.jsp')">Buses</button>
+      <button onclick="loadBooking('ViewHotelBookings.jsp')">Hotels</button>
+      <button onclick="loadBooking('ViewPackageBookings.jsp')">Packages</button>
+    </div>
+
+    <iframe id="bookingFrame" src=""></iframe>
+  </div>
+
+  <script>
+    function loadBooking(page) {
+      document.getElementById('bookingFrame').src = page;
+    }
+  </script>
+
+</body>
+</html>

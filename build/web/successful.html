@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Confirmation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #00c9ff, #92fe9d);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .confirmation-box {
+      background: white;
+      padding: 50px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: slideFadeIn 1s ease-out forwards;
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    @keyframes slideFadeIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .checkmark {
+      font-size: 60px;
+      color: #4BB543;
+      animation: pop 0.5s ease-out forwards;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background: url('https://i.ibb.co/6JTFkFN/wave.png');
+      background-size: cover;
+      animation: wave 4s linear infinite;
+    }
+
+    @keyframes wave {
+      0% { background-position-x: 0; }
+      100% { background-position-x: 1000px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="confirmation-box">
+    <div class="checkmark">✔</div>
+    <h1>Booking Successful!</h1>
+    <p>We will contact you shortly.</p>
+  </div>
+
+  <div class="wave"></div>
+
+</body>
+</html>

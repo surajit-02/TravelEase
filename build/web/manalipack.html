@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manali Holiday Package - TravelEase</title>
+  <link rel="stylesheet" href="stle.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="flight.html">Flights</a>
+      <a href="bus.html">Bus</a>
+      <a href="holiday.html">Package</a>
+      <a href="hotel.html">Hotels</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Experience the Beauty of Manali</h1>
+    <p>4 Nights / 5 Days | Snow, Adventure, Serenity</p>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <img src="manali.jpeg" alt="Manali View">
+    <img src="manali1.jpeg" alt="Snow in Manali">
+    <img src="manali2.jpeg" alt="Solang Valley">
+  </section>
+
+  <!-- About Manali -->
+  <section class="info">
+    <h2>About Manali</h2>
+    <p>
+      <strong>Manali</strong>, nestled in the majestic Himalayas, is one of India’s most popular hill stations.
+      Known for its breathtaking natural beauty, snow-capped mountains, and lush valleys, Manali is a paradise for
+      nature lovers, adventure seekers, and honeymooners alike.
+    </p>
+    <p>
+      Whether you're strolling through the charming streets of <strong>Old Manali</strong>, rafting in the Beas River,
+      or skiing in <strong>Solang Valley</strong>, every moment here feels like a magical escape. The peaceful atmosphere
+      of <strong>Hadimba Temple</strong>, the healing waters of <strong>Vashisht Hot Springs</strong>, and the thrill of
+      <strong>paragliding and trekking</strong> make Manali a complete package for all kinds of travelers.
+    </p>
+    <p>
+      A visit to Manali offers a perfect mix of relaxation and adventure, with cool weather, scenic views, and warm local hospitality.
+    </p>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Manali Trip</h2>
+    <form method="post" action="books">
+
+      <label for="destination">Destination:</label>
+      <input type="text"  name="n1" value="Manali" readonly />
+
+      <label for="name">Full Name:</label>
+      <input type="text" name="n2"  required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="n3"  required />
+
+      <label for="travel_date">Travel Date:</label>
+      <input type="date" name="n4"  required />
+
+      <label for="people">Number of People:</label>
+      <input type="number" name="n5"  min="1" required />
+
+      <label for="requests">Special Requests:</label>
+      <textarea name="n6"  placeholder="Any special preferences or questions?"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+</body>
+</html>
