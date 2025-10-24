@@ -1,0 +1,14 @@
+<span class="close" onclick="closeHotel()">&times;</span>
+<h2>Royal Palace Hotel Booking</h2>
+<p>Live like royalty in Jaipur's finest heritage hotel. Includes luxury rooms, cultural shows, and authentic Rajasthani cuisine.</p>
+
+<form method="post" action="hotelbook" class="booking-form">
+    <input type="text"  name="n0" value="Royal Palace" readonly />
+  <input type="text" name="n1" placeholder="Full Name" required />
+  <input type="email" name="n2" placeholder="Email Address" required />
+  <input type="tel" name="n3" placeholder="Phone Number" required />
+  <input type="date" name="n4" required />
+  <input type="number" name="n5" placeholder="No. of Guests" min="1" required />
+  <textarea name="n6" placeholder="Special Requests (Optional)"></textarea>
+  <button type="submit">Book Now</button>
+</form>

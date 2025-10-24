@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Darjeeling Holiday Package - TravelEase</title>
+  <link rel="stylesheet" href="stle.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="flight.html">Flights</a>
+      <a href="bus.html">Bus</a>
+      <a href="holiday.html">Package</a>
+      <a href="hotel.html">Hotels</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Escape to the Hills of Darjeeling</h1>
+    <p>3 Nights / 4 Days | Tea Gardens, Views, Tranquility</p>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <img src="darjeeling.jpeg" alt="Darjeeling Tea Gardens">
+    <img src="darjeeling1.jpeg" alt="Darjeeling Toy Train">
+    <img src="darjeeling2.jpeg" alt="Kanchenjunga Viewpoint">
+  </section>
+
+  <!-- About Darjeeling -->
+  <section class="info">
+    <h2>About Darjeeling</h2>
+    <p>
+      <strong>Darjeeling</strong>, perched high in the Eastern Himalayas, is a charming hill station known for its lush tea gardens,
+      colonial charm, and sweeping views of the mighty <strong>Kanchenjunga</strong> — the third-highest mountain in the world.
+    </p>
+    <p>
+      Wake up to the cool mountain breeze, sip the world-famous <strong>Darjeeling tea</strong> straight from the source,
+      and ride the iconic <strong>Darjeeling Himalayan Railway</strong> — a UNESCO World Heritage Site.
+    </p>
+    <p>
+      Popular attractions include the peaceful <strong>Peace Pagoda</strong>, bustling <strong>Mall Road</strong>, and the magical
+      sunrise over the snow-capped peaks from <strong>Tiger Hill</strong>. Whether you're a nature lover, photographer, or simply
+      seeking peace, Darjeeling offers an unforgettable retreat.
+    </p>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Darjeeling Trip</h2>
+   <form method="post" action="books">
+
+      <label for="destination">Destination:</label>
+      <input type="text"  name="n1" value="Darjeeling" readonly />
+
+      <label for="name">Full Name:</label>
+      <input type="text" name="n2"  required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="n3"  required />
+
+      <label for="travel_date">Travel Date:</label>
+      <input type="date" name="n4"  required />
+
+      <label for="people">Number of People:</label>
+      <input type="number" name="n5"  min="1" required />
+
+      <label for="requests">Special Requests:</label>
+      <textarea name="n6"  placeholder="Any special preferences or questions?"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+</body>
+</html>

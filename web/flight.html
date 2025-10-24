@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelEase - Flights</title>
+  <link rel="stylesheet" href="flights.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="flight.html" class="active">Flights</a>
+      <a href="bus.html">Bus</a>
+      <a href="holiday.html">Package</a>
+      <a href="hotel.html">Hotels</a>
+     
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Book Your Flight</h1>
+    <p>Search and book your flights easily</p>
+  </section>
+
+  <!-- Search Form -->
+  <section class="search-container">
+    <form action="ShowFlights" method="get" class="search-form" id="flightSearchForm">
+      <div class="form-row">
+        <div class="input-group">
+          <label for="source">From</label>
+          <input type="text" id="source" name="source" placeholder="City or Airport" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="destination">To</label>
+          <input type="text" id="destination" name="destination" placeholder="City or Airport" required>
+        </div>
+      </div>
+      <button type="submit" class="search-btn">Search Flights</button>
+    </form>
+  </section>
+
+  <!-- Flight Results -->
+  <section class="results-container" id="resultsContainer">
+    <!-- Results will appear here -->
+  </section>
+
+  <!-- JS File -->
+  <script src="flights.js"></script>
+</body>
+</html>

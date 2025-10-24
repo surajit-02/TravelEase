@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goa Holiday Package - TravelEase</title>
+  <link rel="stylesheet" href="stle.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="flight.html">Flights</a>
+      <a href="bus.html">Bus</a>
+      <a href="holiday.html">Package</a>
+      <a href="hotel.html">Hotels</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Discover Goa</h1>
+    <p>3 Nights / 4 Days | Beach, Nightlife, Culture</p>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <img src="goa.jpeg" alt="Goa Beach">
+    <img src="goa2.jpeg" alt="Goa Party">
+    <img src="goa3.jpeg" alt="Goa Fort">
+  </section>
+
+  <!-- Info -->
+  <section class="info">
+    <h2>About Goa</h2>
+    <p>Goa is India's top beach destination, famous for its golden sands, vibrant nightlife, and Portuguese heritage. Relax by the beach, explore forts, or party the night away.</p>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Trip</h2>
+    <form method="post" action="jaipur2">
+
+      <label for="destination">Destination:</label>
+      <input type="text"  name="n1" value="Goa" readonly />
+
+      <label for="name">Full Name:</label>
+      <input type="text" name="n2" placeholder="Full Name"  required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="n3" placeholder="Email Id" required />
+
+      <label for="travel_date">Travel Date:</label>
+      <input type="date" name="n4" placeholder="Date" required />
+
+      <label for="people">Number of People:</label>
+      <input type="number" name="n5" placeholder="No of peoples" min="1" required />
+
+      <label for="requests">Special Requests:</label>
+      <textarea name="n6" ></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+</body>
+</html>

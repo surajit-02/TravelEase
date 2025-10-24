@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Secure Access Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .auth-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .auth-form {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      transform: translateY(0);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .auth-form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .logo i {
+      font-size: 42px;
+      color: #1a2a6c;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1a2a6c;
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 28px;
+      position: relative;
+    }
+
+    h2:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, #1a2a6c, #b21f1f);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #1a2a6c;
+      font-weight: 500;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    label i {
+      margin-right: 10px;
+      color: #b21f1f;
+    }
+
+    .input-with-icon {
+      position: relative;
+    }
+
+    .input-with-icon i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #1a2a6c;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px 15px 15px 45px;
+      border: 2px solid #e1e5eb;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      background-color: #f7f9fc;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #1a2a6c;
+      box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.2);
+      outline: none;
+      background-color: #fff;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #a9a9a9;
+    }
+
+    .password-toggle {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #6c757d;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(to right, #1a2a6c, #b21f1f);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #23368d, #c52c2c);
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .additional-links {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .additional-links a {
+      color: #6c757d;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .additional-links a:hover {
+      color: #1a2a6c;
+      text-decoration: underline;
+    }
+
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 15px 25px;
+      background: #ff4757;
+      color: white;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transform: translateX(100%);
+      opacity: 0;
+      transition: all 0.5s ease;
+      z-index: 1000;
+    }
+
+    .notification.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 12px;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      left: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 500px) {
+      .auth-form {
+        padding: 30px 20px;
+      }
+      
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    /* Animation for input focus */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(26, 42, 108, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(26, 42, 108, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(26, 42, 108, 0); }
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      animation: pulse 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-form">
+      <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h2>Admin Login</h2>
+      <form method="post" action="adminlogin" id="loginForm">
+        <div class="form-group">
+          <label for="username"><i class="fas fa-user"></i>Username</label>
+          <div class="input-with-icon">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" name="username" required placeholder="Enter your username">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password"><i class="fas fa-lock"></i>Password</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            <i class="fas fa-eye password-toggle" id="passwordToggle"></i>
+          </div>
+        </div>
+
+        <button type="submit" id="loginButton">Login</button>
+      </form>
+
+      <div class="additional-links">
+        <a href="#">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2023 Secure Admin Portal. All rights reserved.
+  </div>
+
+  <div class="notification" id="notification">
+    Please fill in all fields correctly.
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const passwordToggle = document.getElementById('passwordToggle');
+      const passwordInput = document.getElementById('password');
+      const loginForm = document.getElementById('loginForm');
+      const notification = document.getElementById('notification');
+      
+      // Password visibility toggle
+      passwordToggle.addEventListener('click', function() {
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          passwordToggle.classList.remove('fa-eye');
+          passwordToggle.classList.add('fa-eye-slash');
+        } else {
+          passwordInput.type = 'password';
+          passwordToggle.classList.remove('fa-eye-slash');
+          passwordToggle.classList.add('fa-eye');
+        }
+      });
+      
+      // Form validation
+      loginForm.addEventListener('submit', function(event) {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        if (!username || !password) {
+          event.preventDefault();
+          showNotification('Please fill in all fields.');
+        } else if (password.length < 6) {
+          event.preventDefault();
+          showNotification('Password must be at least 6 characters long.');
+        }
+      });
+      
+      // Show notification function
+      function showNotification(message) {
+        notification.textContent = message;
+        notification.classList.add('show');
+        
+        setTimeout(function() {
+          notification.classList.remove('show');
+        }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>
